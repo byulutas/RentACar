@@ -7,8 +7,9 @@ import com.kodluyoruz.rentACar.entity.Color;
 
 @Repository
 public interface ColorRepository extends JpaRepository<Color, Integer>{
-	
-	boolean existsByColorName(String colorName);
+
 	boolean existsByColorId(int colorId);
+
+	boolean existsByColorName(String colorName);
 
 }

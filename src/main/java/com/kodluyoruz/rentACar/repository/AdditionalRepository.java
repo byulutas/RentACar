@@ -7,7 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AdditionalRepository extends JpaRepository<Additional, Integer> {
 
-    boolean existsByAdditionalName(String additionalName);
     boolean existsByAdditionalId(int additionalId);
+
+    boolean existsByAdditionalName(String additionalName);
 
 }

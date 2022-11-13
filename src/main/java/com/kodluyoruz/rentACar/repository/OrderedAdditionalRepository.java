@@ -10,11 +10,15 @@ import java.util.List;
 public interface OrderedAdditionalRepository extends JpaRepository<OrderedAdditional, Integer> {
 
     boolean existsByOrderedAdditionalId(int orderedAdditionalId);
+
     boolean existsByRentalCar_RentalCarId(int rentalCarId);
-    boolean existsByAdditional_AdditionalId(int additionalId);
-    List<OrderedAdditional> getAllByAdditional_AdditionalIdAndRentalCar_RentalCarId(int additionalId, int rentalCarId);
 
     List<OrderedAdditional> getAllByRentalCar_RentalCarId(int rentalCarId);
+
+    boolean existsByAdditional_AdditionalId(int additionalId);
+
     List<OrderedAdditional> getAllByAdditional_AdditionalId(int additionalId);
+
+    List<OrderedAdditional> getAllByAdditional_AdditionalIdAndRentalCar_RentalCarId(int additionalId, int rentalCarId);
 
 }

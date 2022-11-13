@@ -11,7 +11,8 @@ public interface PaymentRepository extends JpaRepository<Payment, Integer> {
 
     List<Payment> getAllByRentalCar_RentalCarId(int rentalCarId);
 
-    boolean existsByPaymentId(int paymentId);
     boolean existsByRentalCar_RentalCarId(int rentalCarId);
+
+    boolean existsByPaymentId(int paymentId);
 
 }

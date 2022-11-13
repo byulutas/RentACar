@@ -10,9 +10,11 @@ import java.util.List;
 public interface CreditCardRepository extends JpaRepository<CreditCard, Integer> {
 
     boolean existsByCreditCardId(int creditCardId);
+
     boolean existsByCustomer_CustomerId(int customerId);
-    boolean existsByCardNumber(String cardNumber);
 
     List<CreditCard> getAllByCustomer_CustomerId(int customerId);
+
+    boolean existsByCardNumber(String cardNumber);
 
 }

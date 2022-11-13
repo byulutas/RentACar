@@ -7,8 +7,8 @@ import com.kodluyoruz.rentACar.entity.Brand;
 
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, Integer> {
-	
-	boolean existsByBrandName(String brandName);
+
 	boolean existsByBrandId(int brandId);
+	boolean existsByBrandName(String brandName);
 
 }

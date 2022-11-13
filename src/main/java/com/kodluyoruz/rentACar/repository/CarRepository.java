@@ -10,12 +10,16 @@ import com.kodluyoruz.rentACar.entity.Car;
 @Repository
 public interface CarRepository extends JpaRepository<Car, Integer>{
 	
-	boolean existsByCarId(int carId); 
+	boolean existsByCarId(int carId);
+
 	boolean existsByBrand_BrandId(int brandId);
-	boolean existsByColor_ColorId(int colorId);
 
 	List<Car> getAllByBrand_BrandId(int brandId);
+
+	boolean existsByColor_ColorId(int colorId);
+
 	List<Car> getAllByColor_ColorId(int colorId);
+
 	List<Car> findByDailyPriceLessThanEqual(double dailyPrice);
 
 }

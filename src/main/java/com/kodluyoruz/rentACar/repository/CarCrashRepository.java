@@ -9,8 +9,10 @@ import java.util.List;
 @Repository
 public interface CarCrashRepository extends JpaRepository<CarCrash, Integer> {
 
-    boolean existsByCarCrashId(int carCrashId);
     boolean existsByCar_CarId(int carId);
 
     List<CarCrash> getAllByCar_CarId(int carId);
+
+    boolean existsByCarCrashId(int carCrashId);
+
 }
